@@ -112,7 +112,7 @@ export default function Home() {
               {todos.map((todo) => (
                 <li
                   key={todo.id}
-                  className="flex justify-between items-center bg-gray-100 p-3 rounded-lg shadow-sm"
+                 className="flex justify-between items-center bg-gray-100 p-3 rounded-lg shadow-sm"
                 >
                   <div className="flex items-center gap-3">
 
@@ -142,7 +142,7 @@ export default function Home() {
                   </button>
 
 
-                  
+
                 </li>
               ))}
             </ul>
