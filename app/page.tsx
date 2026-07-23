@@ -2,42 +2,62 @@
 
 import { useState } from "react";
 
+type Todo = {
+  id: number;
+  text: string;
+  completed: boolean;
+};
+
 export default function Home() {
-  const [todos, setTodos] = useState<string[]>([]);
+  const [todos, setTodos] = useState<Todo[]>([]);
   const [text, setText] = useState("");
   const [active, setActive] = useState("Home");
+
+  const navItems = ["Home", "About", "Todos", "Contact"];
 
   const addTodo = () => {
     if (!text.trim()) return;
 
-    setTodos([...todos, text]);
+    const newTodo: Todo = {
+      id: Date.now(),
+      text,
+      completed: false,
+    };
+
+    setTodos((prev) => [...prev, newTodo]);
     setText("");
   };
 
-  const deleteTodo = (index: number) => {
-    setTodos(todos.filter((_, i) => i !== index));
+  const deleteTodo = (id: number) => {
+    setTodos((prev) => prev.filter((todo) => todo.id !== id));
   };
 
-  const navItems = ["Home", "About", "Todos", "Contact"];
+  const toggleComplete = (id: number) => {
+    setTodos((prev) =>
+      prev.map((todo) =>
+        todo.id === id
+          ? { ...todo, completed: !todo.completed }
+          : todo
+      )
+    );
+  };
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen bg-gradient-to-r from-blue-100 to-indigo-100">
       {/* Navbar */}
       <nav className="bg-blue-600 text-white shadow-lg">
         <div className="max-w-7xl mx-auto flex justify-between items-center px-8 py-4">
-          <h1 className="text-2xl font-bold cursor-pointer">
-            🚀 Next Todo
-          </h1>
+          <h1 className="text-2xl font-bold">🚀 Next Todo</h1>
 
           <ul className="flex gap-8">
             {navItems.map((item) => (
               <li
                 key={item}
                 onClick={() => setActive(item)}
-                className={`cursor-pointer transition-all duration-300 hover:text-yellow-300 ${
+                className={`cursor-pointer transition ${
                   active === item
-                    ? "text-yellow-300 border-b-2 border-yellow-300 pb-1"
-                    : ""
+                    ? "text-yellow-300 border-b-2 border-yellow-300"
+                    : "hover:text-yellow-300"
                 }`}
               >
                 {item}
@@ -47,19 +67,23 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* Todo App */}
-      <main className="flex justify-center items-center py-16">
-        <div className="bg-white shadow-lg rounded-xl p-6 w-[450px]">
-          <h1 className="text-3xl font-bold text-center mb-5">
-            📝 Next.js Todo App
-          </h1>
+      {/* Main */}
+      <main className="flex justify-center py-16 px-4">
+        <div className="bg-white rounded-xl shadow-xl w-full max-w-lg p-6">
 
-          <div className="flex gap-2 mb-5">
+          <h2 className="text-3xl font-bold text-center mb-6">
+            📝 Todo App
+          </h2>
+
+          {/* Input */}
+          <div className="flex gap-2 mb-6">
             <input
+              type="text"
               value={text}
-              onChange={(e) => setText(e.target.value)}
               placeholder="Enter Todo..."
-              className="border flex-1 rounded-lg p-2 outline-none focus:ring-2 focus:ring-blue-500"
+              onChange={(e) => setText(e.target.value)}
+              onKeyDown={(e) => e.key === "Enter" && addTodo()}
+              className="flex-1 border rounded-lg px-4 py-2 outline-none focus:ring-2 focus:ring-blue-500"
             />
 
             <button
@@ -70,19 +94,48 @@ export default function Home() {
             </button>
           </div>
 
+          {/* Stats */}
+          <div className="flex justify-between text-sm text-gray-600 mb-4">
+            <span>Total : {todos.length}</span>
+            <span>
+              Completed : {todos.filter((t) => t.completed).length}
+            </span>
+          </div>
+
+          {/* Todo List */}
           {todos.length === 0 ? (
-            <p className="text-center text-gray-500">No Todos Yet 🚀</p>
+            <div className="text-center py-10 text-gray-500">
+              🚀 No Todos Yet
+            </div>
           ) : (
             <ul className="space-y-3">
-              {todos.map((todo, index) => (
+              {todos.map((todo) => (
                 <li
-                  key={index}
-                  className="flex justify-between items-center bg-gray-100 rounded-lg px-4 py-3"
+                  key={todo.id}
+                  className="flex justify-between items-center bg-gray-100 p-3 rounded-lg shadow-sm"
                 >
-                  <span>{todo}</span>
+                  <div className="flex items-center gap-3">
+
+                    <input
+                      type="checkbox"
+                      checked={todo.completed}
+                      onChange={() => toggleComplete(todo.id)}
+                    />
+
+                    <span
+                      className={`${
+                        todo.completed
+                          ? "line-through text-gray-400"
+                          : ""
+                      }`}
+                    >
+                      {todo.text}
+                    </span>
+
+                  </div>
 
                   <button
-                    onClick={() => deleteTodo(index)}
+                    onClick={() => deleteTodo(todo.id)}
                     className="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded-lg"
                   >
                     Delete
