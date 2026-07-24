@@ -8,6 +8,9 @@ export default function AboutPage() {
       <span className="mt-4 text-lg text-gray-600">
         Contact us at info@company.com
       </span>
+      <li className="mt-4 text-lg text-gray-600">
+        Follow us on social media for updates and news.
+      </li>
     </div>
   );
 }
