@@ -5,6 +5,9 @@ export default function AboutPage() {
       <p className="mt-4 text-lg text-gray-600">
         This is the About page of our application. Here you can find information about our team, mission, and values.
       </p>  
+      <span className="mt-4 text-lg text-gray-600">
+        Contact us at info@company.com
+      </span>
     </div>
   );
 }
