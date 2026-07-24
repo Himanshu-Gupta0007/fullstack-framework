@@ -11,6 +11,9 @@ export default function AboutPage() {
       <li className="mt-4 text-lg text-gray-600">
         Follow us on social media for updates and news.
       </li>
+      <p className="mt-4 text-lg text-gray-600">          
+        
+      </p>
     </div>
   );
 }
