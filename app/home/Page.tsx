@@ -11,7 +11,14 @@ export default function AboutPage() {
       <li className="mt-4 text-lg text-gray-600">
         Follow us on social media for updates and news.
       </li>
-      <p className="mt-4 text-lg text-gray-600">          
+      <p className="mt-4 text-lg text-gray-600">      
+        <span className="font-semibold">Twitter:</span> @company
+        <li className="mt-2 text-lg text-gray-600">
+          <span className="font-semibold">Facebook:</span> facebook.com/company
+        </li>
+        <li className="mt-2 text-lg text-gray-600">
+          <span className="font-semibold">LinkedIn:</span> linkedin.com/company
+        </li>    
         
       </p>
     </div>
