@@ -17,6 +17,9 @@ const Page = () => {
           <li>
             <Link href="/contact">Contact</Link>
           </li>
+           <li>
+            <Link href="/product">Product</Link>
+          </li>
         </ul>
       </nav>
 
