@@ -23,6 +23,12 @@ const Page = () => {
         </ul>
       </nav>
 
+      <Link href="/product/men">
+  <button className="bg-blue-500 text-white px-4 py-2 rounded mt-4 ml-4">
+    Go to product page
+  </button>
+</Link>
+
       <div className="min-h-screen flex items-center justify-center">
         <h1 className="text-4xl font-bold">Home Page</h1>
       </div>
