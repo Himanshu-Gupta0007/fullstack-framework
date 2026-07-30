@@ -34,7 +34,7 @@ const Page = () => {
               </Link>
             </li>
 
-            
+
 
             <li>
               <Link href="/team" className="hover:text-blue-600">
@@ -95,7 +95,14 @@ const Page = () => {
         <button className="mt-8 bg-blue-700 hover:bg-blue-800 text-white px-6 py-3 rounded-lg">
           Explore Services
         </button>
+
+
       </section>
+
+     
+  
+  
+
     </>
   );
 };
