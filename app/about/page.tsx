@@ -6,6 +6,8 @@ const Page = async () => {
   const res = await fetch("https://fakestoreapi.com/products");
   const products = await res.json();
 
+  
+
   return (
     <div className="min-h-screen p-10">
       <h1 className="text-4xl font-bold mb-8 text-center">
