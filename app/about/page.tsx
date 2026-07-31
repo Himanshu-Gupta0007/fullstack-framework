@@ -1,17 +1,21 @@
 import React from "react";
 
-const Page = async () => {
-    console.log("Helloooooooooo SSR");
-  // Server Side API Call
-  const res = await fetch("https://fakestoreapi.com/products");
-  const products = await res.json();
+// Force Static Generation
+export const dynamic = "force-static";
 
-  
+const Page = async () => {
+  console.log("Hello SSG");
+
+  const res = await fetch("https://fakestoreapi.com/products", {
+    cache: "force-cache",
+  });
+
+  const products = await res.json();
 
   return (
     <div className="min-h-screen p-10">
       <h1 className="text-4xl font-bold mb-8 text-center">
-        Products (SSR)
+        Products (SSG)
       </h1>
 
       <div className="grid grid-cols-4 gap-6">
@@ -26,11 +30,11 @@ const Page = async () => {
               className="h-40 w-full object-contain"
             />
 
-            <h2 className="font-semibold mt-4 line-clamp-2">
+            <h2 className="font-semibold mt-4">
               {item.title}
             </h2>
 
-            <p className="text-green-600 font-bold mt-2">
+            <p className="text-green-600 font-bold">
               ${item.price}
             </p>
           </div>
