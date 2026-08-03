@@ -85,7 +85,7 @@ const Page = () => {
       {/* Hero Section */}
       <section className="min-h-screen flex flex-col justify-center items-center bg-gray-50">
         <h1 className="text-5xl font-bold text-blue-900">
-          Welcome to D Prasad Advisory LLPpakxkjson
+          Welcome to D Prasad Advisory LLP
         </h1>
 
         <p className="mt-4 text-lg text-gray-600">
@@ -93,7 +93,7 @@ const Page = () => {
         </p>
 
         <button className="mt-8 bg-blue-700 hover:bg-blue-800 text-white px-6 py-3 rounded-lg">
-          "SSG (Static Site Generation) me Next.js build time (npm run build) par HTML generate karta hai aur usse static file ke roop me save kar deta hai. User request aane par server dobara HTML generate nahi karta, balki wahi ready HTML serve karta hai. Isse website bahut fast hoti hai aur SEO bhi achha hota hai."
+         our Services
         </button>
 
 
