@@ -164,6 +164,7 @@ const Page = () => {
                 <div className="flex justify-between">
                   <span>Sunday</span>
                   <span>Closed</span>
+
                 </div>
 
               </div>
@@ -184,6 +185,7 @@ const Page = () => {
               <button className="mt-8 bg-amber-500 text-black font-semibold px-8 py-4 rounded-xl hover:bg-amber-400 transition">
                 Schedule Consultation
               </button>
+              
 
             </div>
 
