@@ -25,6 +25,8 @@ const Page = async () => {
             <img src={product.image} />
             <h2>{product.title}</h2>
           </div>
+
+          
         ))}
       </div>
     </div>
