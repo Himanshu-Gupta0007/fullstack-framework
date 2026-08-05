@@ -7,6 +7,10 @@ const TopBar = () => {
         <p>📞 +91 9717998112</p>
         <p>✉️ deepika.bhugra@gmail.com</p>
       </div>
+
+
+
+      
     </div>
   );
 };
