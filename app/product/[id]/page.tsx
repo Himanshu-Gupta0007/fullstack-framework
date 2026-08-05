@@ -5,6 +5,9 @@ export default async function ProductPage({
 }) {
   const { id } = await params;
 
+
+  
+
   return (
     <div>
       <h1>Product IDbfbt: {id}</h1>
