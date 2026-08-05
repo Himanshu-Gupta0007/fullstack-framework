@@ -1,13 +1,14 @@
-import React from 'react'
+import React from "react";
 
 const TopBar = () => {
   return (
-    <div>
-      <div className="bg-amber-500 text-white text-sm py-2 px-4 text-center">
-        <p>Welcome to D Prasad Advisory LLP! Your trusted partner in financial advisory services.</p>
-      </div>            
+    <div className="bg-slate-950 text-white text-sm">
+      <div className="max-w-7xl mx-auto flex justify-between px-6 py-2">
+        <p>📞 +91 9717998112</p>
+        <p>✉️ deepika.bhugra@gmail.com</p>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default TopBar
+export default TopBar;
