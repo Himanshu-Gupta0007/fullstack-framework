@@ -11,6 +11,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="min-h-screen flex flex-col">
         <TopBar />
+        
         <Navbar />
 
         <main className="flex-1">
