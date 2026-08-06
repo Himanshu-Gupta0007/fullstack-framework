@@ -12,6 +12,9 @@ const Page = () => {
             📋 Job Responsibilities
           </h2>
 
+
+          
+
           <ul className="list-disc pl-6 space-y-2 text-gray-700">
             <li>Analyze data using Microsoft Excel.</li>
             <li>Create reports and dashboards.</li>
