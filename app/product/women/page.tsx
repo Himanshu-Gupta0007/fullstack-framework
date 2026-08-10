@@ -17,6 +17,7 @@ const Page = () => {
 
           <ul className="list-disc pl-6 space-y-2 text-gray-700">
             <li>Analyze data using Microsoft Excel.</li>
+            <li>Interpret and communicate findings effectively.</li>
             <li>Create reports and dashboards.</li>
             <li>Clean and validate data.</li>
             <li>Support clients and internal teams with analysis.</li>
