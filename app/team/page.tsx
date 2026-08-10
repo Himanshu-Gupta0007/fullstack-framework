@@ -343,6 +343,10 @@ const Page = () => {
           </div>
         </div>
 
+
+
+
+
         <footer className="border-t border-[#1B1B18]/10 px-6 py-8 sm:px-10">
           <p
             className="text-xs text-[#8A8A7E]"
