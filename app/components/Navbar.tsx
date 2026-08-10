@@ -7,7 +7,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto flex items-center justify-between h-20 px-6">
         <div>
           <h1 className="text-2xl font-bold text-slate-900">
-            D Prasad
+            dbservices
           </h1>
 
           <p className="text-xs tracking-widest text-amber-600 uppercase">

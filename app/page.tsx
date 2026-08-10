@@ -17,9 +17,9 @@ const Page = () => {
 
           {/* Heading */}
           <h1 className="mt-8 text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight text-white">
-            D Prasad
+            
             <span className="block text-amber-400">
-              Advisory LLP
+            dbservices0816@gmail.com
             </span>
           </h1>
 
