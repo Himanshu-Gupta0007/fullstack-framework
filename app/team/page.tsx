@@ -68,7 +68,7 @@ const TokenFlow = ({ start }: { start: boolean }) => (
         start ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"
       }`}
     >
-      "Hello, how are you?"
+      "Hello, how are you?""goodbye" is tokenized into 6 tokens: "Hello", ",", "how", "are", "you", and "?".
     </div>
 
     <p
