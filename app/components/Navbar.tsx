@@ -9,6 +9,7 @@ const Navbar = () => {
           <h1 className="text-2xl font-bold text-slate-900">
             dbservices
           </h1>
+          
 
           <p className="text-xs tracking-widest text-amber-600 uppercase">
             Advisory LLP
