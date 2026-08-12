@@ -7,7 +7,9 @@ const page = () => {
     <p>lama</p>
     <span>jn</span>
     
-     </div>
+      <li>Item 1</li>
+      <li>Item 2</li>
+    </div>
   )
 }
 
