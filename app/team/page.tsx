@@ -50,7 +50,7 @@ function Navbar() {
         href="#"
         className="bg-orange-500 hover:bg-orange-600 transition text-white font-semibold px-6 py-3 rounded-lg text-[15px]"
       >
-        Contact
+        ContactTERE SHAR TO jata vabhina nu lalakra ke mere ciye vich tere chare 
       </Link>
     </header>
   );
@@ -61,7 +61,7 @@ function Hero() {
     <section className="relative overflow-hidden">
       {/* Sticky "Get a Quote" side tab */}
       <div className="fixed right-0 top-1/2 -translate-y-1/2 z-30 bg-orange-500 text-white text-sm font-semibold px-2 py-4 rounded-l-lg [writing-mode:vertical-rl] tracking-wide cursor-pointer">
-        Get a Quotecusfhweouifh34gielmwd mindkwevnsnkdnjn9jwnhimajjs oejsdinwakxxkisdjidjvwkjcdihwecnisswqcsd san sbceufsscns xcujwiduwebcksdj ckihcbdwoucbsdn swchbdcijksd kdb dwvguiewwrfsd bcj dfcbvdwnc dcjk hbdwichbsm ndcjhcdabwq shcbswdujvbdjc scbdwvibdwc WR
+        Get a Quote
       </div>
 
       <div className="grid lg:grid-cols-2 gap-10 items-center px-6 md:px-10 pt-6 pb-16 max-w-7xl mx-auto relative">
