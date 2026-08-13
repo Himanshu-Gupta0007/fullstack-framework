@@ -39,6 +39,7 @@ const Page = async () => {
 
             <p className="text-lg font-bold mt-2">
               ${product.price}
+              
             </p>
           </div>
         ))}
