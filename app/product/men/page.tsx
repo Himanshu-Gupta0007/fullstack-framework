@@ -33,7 +33,7 @@ const Page = async () => {
               className="w-full h-60 object-contain"
             />
 
-            <h2 className="font-semibold mt-4">
+            <h2 className="font-semibold mt-4 font-lg leading-6 text-gray-800 bg-gray-100 p-2 rounded">
               {product.title}
             </h2>
 
