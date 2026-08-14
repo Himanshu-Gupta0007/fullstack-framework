@@ -3,6 +3,7 @@ type Product = {
   title: string;
   price: number;
   image: string;
+  number: number;
 };
 
 const Page = async () => {
