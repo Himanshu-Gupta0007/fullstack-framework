@@ -71,7 +71,7 @@ const Page = () => {
 
         </div>
 
-        {/* Form + Office Details */}
+        
 
         <div className="grid lg:grid-cols-2 gap-12">
 
