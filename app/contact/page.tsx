@@ -4,7 +4,7 @@ const Page = () => {
   return (
     <main className="bg-slate-50">
 
-      {/* Hero */}
+    
 
       <section className="bg-slate-950 text-white py-24">
         <div className="max-w-7xl mx-auto px-6 text-center">
