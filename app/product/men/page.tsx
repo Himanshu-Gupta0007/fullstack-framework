@@ -37,6 +37,8 @@ const Page = async () => {
               {product.title}
             </h2>
 
+            <p>j</p>
+
             <p className="text-lg font-bold mt-2">
               ${product.price}
               
