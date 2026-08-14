@@ -27,7 +27,7 @@ const Page = () => {
         </div>
       </section>
 
-      {/* Contact Info */}
+    
 
       <section className="max-w-7xl mx-auto px-6 py-20">
 
