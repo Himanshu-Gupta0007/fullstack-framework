@@ -222,11 +222,13 @@ const Page = () => {
 
 
 
-                  
+
                   <span>Sunday</span>
                   <span className="font-medium">Closed</span>
                 </div>
               </div>
+
+              
             </div>
 
             {/* Immediate Assistance */}
