@@ -219,6 +219,10 @@ const Page = () => {
                 </div>
 
                 <div className="flex flex-col justify-between gap-1 sm:flex-row">
+
+
+
+                  
                   <span>Sunday</span>
                   <span className="font-medium">Closed</span>
                 </div>
@@ -238,7 +242,7 @@ const Page = () => {
 
 
 
-              
+
 
               <a
                 href="tel:+919717998112"
