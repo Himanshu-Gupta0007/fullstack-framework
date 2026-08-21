@@ -1,173 +1,383 @@
-// app/page.tsx
-// Next.js 14 (App Router) + Tailwind CSS
-// Drop this into app/page.tsx. Make sure Tailwind is set up in your project.
+"use client";
 
+import React from "react";
+import Image from "next/image";
 import Link from "next/link";
-import { FaReact, FaDocker, FaWordpress, FaNodeJs } from "react-icons/fa";
-import { FaAws } from "react-icons/fa6";
-// npm install react-icons
+import {
+  ArrowRight,
+  Award,
+  BriefcaseBusiness,
+  Globe2,
+  Scale,
+  Users,
+} from "lucide-react";
 
-export default function Home() {
+const directors = [
+  {
+    name: "CMA. Deepika Bhugra Prasad",
+    role: "Founder & Managing Partner",
+    qualification: "Cost Accountant, Insolvency Professional",
+    description:
+      "A leading women insolvency professional in India with over 25 years of experience. Based in Delhi & Gurgaon, she serves as an Insolvency Resolution Professional for CIRP, advising across healthcare, automobile, engineering, EPC, textiles, and more.",
+    image: "/assets/deepika-prasad-Ec7LS7Qu.jpg",
+    href: "/team/deepika-prasad",
+  },
+  {
+    name: "Mr. Srinivas Prasad",
+    role: "Designated Partner – International Strategy & Cross-Border Operations",
+    qualification: "B.Sc, PGDCA, Ex Indian Army Officer",
+    description:
+      "Over three decades of global experience across Africa, Latin America, Russia, Europe, South Asia, and India. A former Indian Army officer with deep expertise in multi-jurisdictional EPC projects, international trade, and cross-border insolvency.",
+    image: "/assets/srinivas-prasad-DkzDFhrt.jpg",
+    href: "/team/srinivas-prasad",
+  },
+  {
+    name: "CA Arvind Mittal",
+    role: "Designated Partner",
+    qualification: "Chartered Accountant, Insolvency Professional",
+    description:
+      "Over 17 years of experience in taxation, auditing, forensic investigations, and insolvency advisory. Actively involved in CIRP, liquidation, and personal guarantor insolvency proceedings across real estate, infrastructure, and financial services.",
+    image: "/assets/arvind-mittal-D1T-Lhmi.jpg",
+    href: "/team/arvind-mittal",
+  },
+  {
+    name: "CMA Anil Sharma",
+    role: "Senior Advisor",
+    qualification: "Cost Accountant, ICMAI",
+    description:
+      "Over 30 years of professional experience in cost accounting, taxation, financial advisory, and management consulting. Former Chairman of Northern India Regional Council of ICMAI (2019-20) and Chairman of Indirect Tax Committee of ASSOCHAM (North).",
+    image: "/assets/anil-sharma-wMGkciDD.jpg",
+    href: "/team/anil-sharma",
+  },
+  {
+    name: "CMA D.C. Bajaj",
+    role: "Senior Advisor",
+    qualification: "Former President, ICMAI",
+    description:
+      "Over 35 years of experience in finance, cost analysis, public policy, and regulatory advisory. Former Chief Adviser (Cost), Ministry of Finance, Government of India; Former Member, AERA.",
+    image: "/assets/dc-bajaj-Ce3v0_lW.jpg",
+    href: "/team/dc-bajaj",
+  },
+  {
+    name: "Ms. Shalini Mathur",
+    role: "Senior Advisor",
+    qualification: "BA (Hons) Economics, MBE",
+    description:
+      "Over 36 years of banking experience with HDFC Bank and State Bank of India. Former Zonal Head (North) – Corporate Recoveries at HDFC Bank, managing a stressed asset portfolio of approximately ₹4,600 crore.",
+    image: "/assets/shalini-mathur-CS2Jsr0y.jpg",
+    href: "/team/shalini-mathur",
+  },
+];
+
+const advocates = [
+  "Atul Bhatia",
+  "Akshay Goel",
+  "Shrey Patnaik",
+  "Mukesh Pandey",
+  "Rahul Gupta",
+  "Sanjeev Choudhary",
+  "Gaurav Joshi",
+  "Saira Khan",
+  "Kush Taneja",
+  "Shivani Chandra",
+  "Anushka",
+];
+
+const teamMembers = [
+  "Rajnish",
+  "Kolkata – Arun",
+  "Zhoib",
+  "Zubeen",
+];
+
+const supportStaff = [
+  "Pulkit Raswant",
+  "Parth Advani",
+  "Hreshekesh Jha",
+  "Sundaram Pachauri",
+];
+
+const Page = () => {
   return (
-    <main className="bg-white overflow-x-hidden">
-      <Navbar />
-      <Hero />
-    </main>
-  );
-}
+    <main className="bg-[#f8fafc] text-slate-900">
+      {/* ================= HERO ================= */}
+      <section className="relative overflow-hidden bg-[#071a2b]">
+        <div className="absolute -right-40 -top-40 h-[500px] w-[500px] rounded-full bg-cyan-400/10 blur-3xl" />
+        <div className="absolute -bottom-40 -left-40 h-[450px] w-[450px] rounded-full bg-blue-500/10 blur-3xl" />
 
-function Navbar() {
-  return (
-    <header className="flex items-center justify-between px-6 md:px-10 py-5 relative z-20">
-      {/* Logo */}
-      <div className="flex items-center gap-1">
-        <span className="text-2xl font-extrabold tracking-tight">
-          <span className="text-orange-500">AT</span>{" "}
-          <span className="text-gray-900">DRIVE</span>
-        </span>
-        <svg width="28" height="20" viewBox="0 0 28 20" className="ml-1">
-          <rect x="0" y="0" width="18" height="4" fill="#F4622A" transform="skewX(-20)" />
-          <rect x="0" y="8" width="24" height="4" fill="#F4622A" transform="skewX(-20)" />
-          <rect x="0" y="16" width="14" height="4" fill="#F4622A" transform="skewX(-20)" />
-        </svg>
-      </div>
+        <div className="relative mx-auto max-w-7xl px-6 py-24 lg:px-8 lg:py-32">
+          <div className="max-w-3xl">
+            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-cyan-300">
+              <span className="h-2 w-2 rounded-full bg-cyan-400" />
+              Our Team
+            </div>
 
-      {/* Nav links */}
-      <nav className="hidden lg:flex items-center gap-9 text-gray-800 font-medium text-[15px]">
-        <button className="flex items-center gap-1 hover:text-orange-500 transition">
-          Service
-          <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
-            <path d="M1 1L6 6L11 1" stroke="currentColor" strokeWidth="1.5" />
-          </svg>
-        </button>
-        <Link href="#" className="hover:text-orange-500 transition">Portfolio</Link>
-        <Link href="#" className="hover:text-orange-500 transition">Industry Verticals</Link>
-        <Link href="#" className="hover:text-orange-500 transition">About Us</Link>
-        <Link href="#" className="hover:text-orange-500 transition">Career</Link>
-      </nav>
+            <h1 className="text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
+              Experienced professionals,
+              <br />
+              <span className="text-cyan-300">trusted expertise.</span>
+            </h1>
 
-      <Link
-        href="#"
-        className="bg-orange-500 hover:bg-orange-600 transition text-white font-semibold px-6 py-3 rounded-lg text-[15px]"
-      >
-        ContactTERE SHAR TO jata vabhina nu lalakra ke mere ciye vich tere chare 
-      </Link>
-    </header>
-  );
-}
+            <p className="mt-7 max-w-2xl text-lg leading-8 text-slate-300">
+              Meet the experienced professionals leading D Prasad Advisory LLP
+              with integrity and expertise.
+            </p>
+          </div>
+        </div>
+      </section>
 
-function Hero() {
-  return (
-    <section className="relative overflow-hidden">
-      {/* Sticky "Get a Quote" side tab */}
-      <div className="fixed right-0 top-1/2 -translate-y-1/2 z-30 bg-orange-500 text-white text-sm font-semibold px-2 py-4 rounded-l-lg [writing-mode:vertical-rl] tracking-wide cursor-pointer">
-        Get a Quote
-      </div>
+      {/* ================= DIRECTORS INTRO ================= */}
+      <section className="mx-auto max-w-7xl px-6 pb-10 pt-20 lg:px-8">
+        <div className="grid gap-10 lg:grid-cols-[1fr_1.3fr] lg:items-end">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-600">
+              Leadership
+            </p>
 
-      <div className="grid lg:grid-cols-2 gap-10 items-center px-6 md:px-10 pt-6 pb-16 max-w-7xl mx-auto relative">
-        {/* LEFT: Text content */}
-        <div className="relative z-10">
-          <h1 className="text-4xl sm:text-5xl xl:text-6xl font-extrabold leading-[1.1] text-gray-800">
-            Building Secure and
-            <br />
-            Transforming <span className="text-orange-500">Ideas</span> into
-            <br />
-            Scalable Solutions
-          </h1>
+            <h2 className="mt-4 text-3xl font-semibold tracking-tight text-[#071a2b] sm:text-4xl">
+              Our Directors & Advisors
+            </h2>
+          </div>
 
-          <p className="mt-6 text-gray-600 text-lg max-w-md leading-relaxed">
-            Secure, high-performance digital solutions built with modern
-            architecture and industry-proven best practices.
+          <p className="max-w-2xl text-base leading-7 text-slate-600">
+            Our leadership brings together decades of experience across
+            insolvency, finance, taxation, banking, international operations,
+            restructuring and regulatory advisory.
+          </p>
+        </div>
+      </section>
+
+      {/* ================= DIRECTORS ================= */}
+      <section className="mx-auto max-w-7xl px-6 pb-24 lg:px-8">
+        <div className="grid gap-7 md:grid-cols-2">
+          {directors.map((person, index) => (
+            <article
+              key={person.name}
+              className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:border-cyan-200 hover:shadow-xl"
+            >
+              <div className="relative h-[340px] overflow-hidden bg-[#071a2b]">
+                <Image
+                  src={person.image}
+                  alt={person.name}
+                  fill
+                  priority={index < 2}
+                  className="object-cover object-top transition duration-700 group-hover:scale-105"
+                />
+
+                <div className="absolute inset-0 bg-gradient-to-t from-[#071a2b]/80 via-transparent to-transparent" />
+
+                <div className="absolute bottom-5 left-5 right-5">
+                  <div className="mb-2 inline-flex rounded-full bg-cyan-400 px-3 py-1 text-xs font-bold text-[#071a2b]">
+                    {person.role}
+                  </div>
+
+                  <h3 className="text-2xl font-semibold text-white">
+                    {person.name}
+                  </h3>
+                </div>
+              </div>
+
+              <div className="p-7">
+                <p className="text-sm font-semibold text-cyan-600">
+                  {person.qualification}
+                </p>
+
+                <p className="mt-4 text-sm leading-7 text-slate-600">
+                  {person.description}
+                </p>
+
+                <Link
+                  href={person.href}
+                  className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#071a2b] transition hover:text-cyan-600"
+                >
+                  View Profile
+                  <ArrowRight
+                    size={17}
+                    className="transition group-hover:translate-x-1"
+                  />
+                </Link>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      {/* ================= EXPERTISE STRIP ================= */}
+      <section className="bg-[#071a2b] py-20">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="grid gap-5 md:grid-cols-3">
+            <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-7">
+              <Award className="text-cyan-300" size={28} />
+
+              <h3 className="mt-5 text-xl font-semibold text-white">
+                Proven Experience
+              </h3>
+
+              <p className="mt-3 text-sm leading-6 text-slate-400">
+                Decades of professional experience across insolvency,
+                finance, banking, taxation and advisory.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-7">
+              <Globe2 className="text-cyan-300" size={28} />
+
+              <h3 className="mt-5 text-xl font-semibold text-white">
+                Global Perspective
+              </h3>
+
+              <p className="mt-3 text-sm leading-6 text-slate-400">
+                International experience across multiple jurisdictions,
+                industries and cross-border engagements.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-7">
+              <Scale className="text-cyan-300" size={28} />
+
+              <h3 className="mt-5 text-xl font-semibold text-white">
+                Professional Integrity
+              </h3>
+
+              <p className="mt-3 text-sm leading-6 text-slate-400">
+                A structured, transparent and compliance-focused approach to
+                every professional engagement.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ================= ADVOCATES ================= */}
+      <section className="mx-auto max-w-7xl px-6 py-24 lg:px-8">
+        <div className="max-w-2xl">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-600">
+            Legal Professionals
           </p>
 
-          <button className="mt-8 inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 transition text-white font-semibold px-7 py-4 rounded-lg">
-            Start a Project
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <path d="M1 8H15M15 8L9 2M15 8L9 14" stroke="white" strokeWidth="1.8" />
-            </svg>
-          </button>
+          <h2 className="mt-4 text-3xl font-semibold tracking-tight text-[#071a2b] sm:text-4xl">
+            Advocates
+          </h2>
 
-          <hr className="mt-10 border-gray-200 max-w-lg" />
-
-          <div className="mt-8 flex gap-10 sm:gap-14">
-            <Stat number="500+" label="PROJECTS" />
-            <Stat number="98%" label="SATISFACTION" />
-            <Stat number="50+" label="TEAM MEMBERS" />
-          </div>
+          <p className="mt-4 leading-7 text-slate-600">
+            Having more than half a decade of experience, our legal
+            professionals support the firm across insolvency and restructuring
+            matters.
+          </p>
         </div>
 
-        {/* RIGHT: Graphic */}
-        <div className="relative h-[420px] sm:h-[560px] flex items-center justify-center">
-          {/* soft glow behind everything */}
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,138,61,0.28)_0%,rgba(255,138,61,0)_70%)]" />
-          {/* outer thin orbit ring */}
-          <div className="absolute w-[440px] h-[440px] border border-orange-200/70 rounded-full" />
-          {/* a few sparkle dots on the ring, like the screenshot */}
-          <span className="absolute top-10 right-24 w-1.5 h-1.5 rounded-full bg-orange-300" />
-          <span className="absolute bottom-16 left-28 w-1 h-1 rounded-full bg-orange-300" />
-          <span className="absolute top-1/3 right-6 w-1 h-1 rounded-full bg-orange-200" />
+        <div className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          {advocates.map((name, index) => (
+            <div
+              key={name}
+              className="group flex items-center gap-4 rounded-xl border border-slate-200 bg-white px-5 py-4 shadow-sm transition hover:-translate-y-0.5 hover:border-cyan-200 hover:shadow-md"
+            >
+              <span className="text-xs font-bold text-cyan-600">
+                {String(index + 1).padStart(2, "0")}
+              </span>
 
-          {/* Stacked / layered 3D squares (isometric card stack) */}
-          <div className="relative w-72 h-72 flex items-center justify-center">
-            <div className="absolute w-72 h-72 bg-white rounded-[2rem] shadow-2xl" />
-            <div className="absolute w-[15.5rem] h-[15.5rem] bg-gray-50 rounded-[1.8rem] shadow-xl translate-y-[-6px]" />
-            <div className="absolute w-44 h-44 bg-white rounded-[1.6rem] shadow-lg translate-y-[-12px]" />
-            <div className="absolute w-28 h-28 bg-gradient-to-br from-orange-300 to-orange-500 rounded-2xl shadow-lg translate-y-[-18px]" />
+              <span className="font-medium text-[#071a2b]">{name}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ================= TEAM MEMBERS ================= */}
+      <section className="border-y border-slate-200 bg-white py-20">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="flex items-end justify-between">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-600">
+                Our People
+              </p>
+
+              <h2 className="mt-4 text-3xl font-semibold text-[#071a2b]">
+                Team Members
+              </h2>
+            </div>
+
+            <Users
+              size={75}
+              strokeWidth={1}
+              className="hidden text-slate-200 md:block"
+            />
           </div>
 
-          {/* Floating tech icon cards, positioned like the original around the stack */}
-          <TechCard className="top-0 left-6 sm:left-12">
-            <FaReact className="text-sky-400" size={30} />
-          </TechCard>
-
-          <TechCard className="top-4 right-0 sm:right-2">
-            <FaAws className="text-gray-800" size={34} />
-          </TechCard>
-
-          <TechCard className="bottom-28 left-0" faded>
-            <FaNodeJs className="text-green-600" size={28} />
-          </TechCard>
-
-          <TechCard className="bottom-2 left-20 sm:left-28">
-            <FaDocker className="text-sky-500" size={30} />
-          </TechCard>
-
-          <TechCard className="bottom-20 right-0">
-            <FaWordpress className="text-blue-700" size={32} />
-          </TechCard>
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 md:grid-cols-4">
+            {teamMembers.map((name) => (
+              <div
+                key={name}
+                className="rounded-xl bg-[#f8fafc] px-5 py-6 text-center font-semibold text-[#071a2b] transition hover:bg-cyan-50"
+              >
+                {name}
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
-  );
-}
+      </section>
 
-function Stat({ number, label }: { number: string; label: string }) {
-  return (
-    <div>
-      <div className="text-3xl font-extrabold text-orange-500">{number}</div>
-      <div className="text-xs tracking-widest text-gray-500 mt-1 font-medium">
-        {label}
-      </div>
-    </div>
-  );
-}
+      {/* ================= SUPPORT STAFF ================= */}
+      <section className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
+        <div className="rounded-3xl bg-[#071a2b] p-8 sm:p-12">
+          <div className="max-w-2xl">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-300">
+              Operations
+            </p>
 
-function TechCard({
-  className,
-  children,
-  faded,
-}: {
-  className: string;
-  children: React.ReactNode;
-  faded?: boolean;
-}) {
-  return (
-    <div
-      className={`absolute w-20 h-20 sm:w-24 sm:h-24 bg-white rounded-2xl border border-gray-100 shadow-[0_10px_30px_rgba(0,0,0,0.08)] flex items-center justify-center ${
-        faded ? "opacity-70" : ""
-      } ${className}`}
-    >
-      {children}
-    </div>
+            <h2 className="mt-4 text-3xl font-semibold text-white">
+              Support Staff
+            </h2>
+
+            <p className="mt-4 text-sm leading-7 text-slate-400">
+              Our support team plays an important role in ensuring smooth
+              coordination and efficient execution across the firm.
+            </p>
+          </div>
+
+          <div className="mt-9 grid gap-3 sm:grid-cols-2 md:grid-cols-4">
+            {supportStaff.map((name) => (
+              <div
+                key={name}
+                className="rounded-xl border border-white/10 bg-white/[0.05] px-5 py-5 text-center font-medium text-white"
+              >
+                {name}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ================= CTA ================= */}
+      <section className="px-6 pb-20 lg:px-8">
+        <div className="mx-auto max-w-7xl rounded-3xl bg-cyan-400 px-8 py-12 sm:px-12 lg:flex lg:items-center lg:justify-between">
+          <div className="max-w-2xl">
+            <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#071a2b]/60">
+              D Prasad Advisory LLP
+            </p>
+
+            <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[#071a2b] sm:text-4xl">
+              Expertise you can rely on.
+            </h2>
+
+            <p className="mt-4 leading-7 text-[#071a2b]/70">
+              Connect with our experienced professionals for insolvency,
+              restructuring and distressed asset advisory.
+            </p>
+          </div>
+
+          <Link
+            href="/contact"
+            className="mt-8 inline-flex shrink-0 items-center gap-2 rounded-lg bg-[#071a2b] px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-[#102c43] lg:mt-0"
+          >
+            Contact Us
+            <ArrowRight size={18} />
+          </Link>
+        </div>
+      </section>
+
+     
+    </main>
   );
-}
+};
+
+export default Page;
