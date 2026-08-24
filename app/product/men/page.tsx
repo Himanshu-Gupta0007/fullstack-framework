@@ -44,9 +44,11 @@ const Page = async () => {
               ${product.price}
               
             </p>
-            
+
           </div>
         ))}
+
+        
       </div>
     </div>
   );
