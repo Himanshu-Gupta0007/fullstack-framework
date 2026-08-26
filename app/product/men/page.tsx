@@ -36,6 +36,13 @@ const Page = async () => {
             </p>
           </div>
 
+
+
+
+
+
+          
+
           <div className="rounded-full bg-white px-5 py-2 text-sm font-medium text-gray-600 shadow-sm ring-1 ring-gray-200">
             {products.length} Products
           </div>
