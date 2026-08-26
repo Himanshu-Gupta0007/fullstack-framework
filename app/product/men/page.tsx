@@ -41,7 +41,7 @@ const Page = async () => {
 
 
 
-          
+
 
           <div className="rounded-full bg-white px-5 py-2 text-sm font-medium text-gray-600 shadow-sm ring-1 ring-gray-200">
             {products.length} Products
@@ -61,6 +61,18 @@ const Page = async () => {
               <span className="absolute left-4 top-4 z-10 rounded-full bg-gray-900 px-3 py-1 text-xs font-semibold text-white">
                 NEW
               </span>
+
+
+
+
+
+
+
+
+
+
+
+              
 
               <button
                 className="absolute right-4 top-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-white text-gray-500 shadow-md transition hover:bg-red-50 hover:text-red-500"
