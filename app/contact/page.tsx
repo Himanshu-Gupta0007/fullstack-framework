@@ -9,7 +9,7 @@ const Page = () => {
           </span>
 
           <h1 className="mt-6 text-4xl font-bold md:text-5xl lg:text-6xl">
-            Let's Discuss Your
+            Let's Discuss Your financial 
             <span className="text-amber-400"> Requirements</span>
           </h1>
 

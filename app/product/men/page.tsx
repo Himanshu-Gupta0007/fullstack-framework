@@ -68,12 +68,6 @@ const Page = async () => {
 
 
 
-
-
-
-
-              
-
               <button
                 className="absolute right-4 top-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-white text-gray-500 shadow-md transition hover:bg-red-50 hover:text-red-500"
                 aria-label="Add to wishlist"
