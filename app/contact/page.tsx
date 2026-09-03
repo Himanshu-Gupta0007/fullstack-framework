@@ -5,7 +5,7 @@ const Page = () => {
       <section className="bg-slate-950 py-24 text-white">
         <div className="mx-auto max-w-7xl px-6 text-center">
           <span className="font-semibold uppercase tracking-widest text-amber-400">
-            Contact Us
+            Contact Us 
           </span>
 
           <h1 className="mt-6 text-4xl font-bold md:text-5xl lg:text-6xl">
