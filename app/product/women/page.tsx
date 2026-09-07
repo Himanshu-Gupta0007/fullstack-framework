@@ -23,7 +23,10 @@ const Page = () => {
         </section>
 
 
-        
+
+
+
+
 
         {/* Skills */}
         <section className="mb-8">
